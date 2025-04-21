@@ -1,0 +1,81 @@
+/* Styling untuk container proyek */
+.projects {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Grid untuk menampilkan proyek */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+  gap: 1.5rem; /* Jarak antar item grid */
+  justify-items: center; /* Menyusun grid agar item terpusat */
+}
+
+/* Responsif untuk layar besar, dua kolom */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom pada layar lebih besar */
+  }
+}
+
+/* Styling untuk setiap kartu proyek */
+.card {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan efek kedalaman */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi saat hover */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efek naik saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lebih jelas saat hover */
+}
+
+/* Styling untuk gambar proyek */
+.image {
+  width: 100px; /* Ukuran gambar kecil */
+  height: 100px; /* Tinggi gambar kecil */
+  object-fit: cover; /* Memastikan gambar terpotong dengan benar */
+  border-radius: 50%; /* Gambar berbentuk bulat */
+  margin-bottom: 1rem; /* Memberikan jarak antara gambar dan nama proyek */
+}
+
+
+/* Styling untuk judul proyek */
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Styling untuk deskripsi proyek */
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Styling untuk teknologi proyek */
+.card p strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Styling untuk link proyek */
+.card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #0056b3;
+}

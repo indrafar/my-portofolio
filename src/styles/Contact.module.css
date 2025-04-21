@@ -1,0 +1,34 @@
+.contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Mengatur warna teks untuk link pada setiap mode */
+.info a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  font-weight: normal;
+  transition: color 0.3s ease; /* Transisi warna yang halus */
+}
+
+/* Light Mode */
+.light .info a {
+  color: black; /* Menjadikan warna hitam pada light mode */
+}
+
+/* Dark Mode */
+.dark .info a {
+  color: white; /* Menjadikan warna putih pada dark mode */
+}
+
+/* Jika link dalam mode apapun tidak berwarna biru */
+.info a:link,
+.info a:visited {
+  color: inherit; /* Mengatur agar warna mengikuti parent (light/dark mode) */
+}

@@ -1,0 +1,83 @@
+/* Styling untuk navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Biar nggak ketutupan elemen lain */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+/* Styling untuk judul navbar */
+/* Container kiri: h1 + links */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styling untuk link */
+.links a {
+  text-decoration: none;  /* Menghapus garis bawah pada link */
+  color: #007bff;  /* Mengatur warna teks link */
+  padding: 0.5rem;  /* Memberikan padding sekitar link */
+  border-radius: 0.3rem;  /* Menambahkan border radius agar sudutnya melengkung */
+  transition: color 0.3s ease;  /* Menambahkan efek transisi untuk perubahan warna */
+}
+
+/* Efek hover untuk link */
+.links a:hover {
+  color: re;  /* Mengubah warna teks menjadi oranye saat hover */
+}
+
+/* Styling untuk tombol tema */
+.themeButton {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.themeButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsif untuk perangkat lebih kecil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;  /* Menyusun link secara vertikal */
+    gap: 1rem;  /* Memberikan jarak antar link */
+  }
+
+  .themeButton {
+    margin-top: 1rem;
+  }
+}
+
+/* Responsif untuk perangkat lebih besar */
+@media (min-width: 768px) {
+  .links {
+    flex-direction: row;  /* Menyusun link secara horizontal */
+    justify-content: flex-start;  /* Menempatkan link di kiri */
+  }
+
+  .links a {
+    font-size: 1.2rem; /* Ukuran font lebih besar di perangkat besar */
+    margin-right: 1rem; /* Memberikan jarak antar link */
+  }
+}
